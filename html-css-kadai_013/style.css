@@ -16,14 +16,7 @@ p {
 PC用のスタイル 
 =================*/
 @media screen and (min-width: 768px) {
-  #menu-sp {
-    display: none;
-  }
 
-  #nav-sp {
-    display: none;
-  }
-  
   /* 横幅設定 */
   body {
     max-width: 1080px;
@@ -66,9 +59,18 @@ PC用のスタイル
   #nav-pc>a:active {
     color: #0d0d0d;
   }
+  #menu-sp,
+  #nav-sp {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 375px) {
+@media screen and (max-width: 767px) {
+  body {
+    min-width: 375px;
+    margin: 0;
+  }
+
   #nav-pc {
     display: none;
   }
@@ -76,6 +78,7 @@ PC用のスタイル
   #menu-sp {
     float: right;
     padding: 0;
+    margin: 0;
   }
 
   #nav-sp {
@@ -128,7 +131,7 @@ PC用のスタイル
     color: #ffffff;
   }
 
-  #nav-sp .manu {
+  #nav-sp .menu {
     text-decoration: none;
     display: block;
     margin: 0 20px;
@@ -136,6 +139,6 @@ PC用のスタイル
     font-size: 16px;
     background-image: url("images/arrow.png");
     background-repeat: no-repeat;
-    background-position: right top
+    background-position: right top;
   }
 }
